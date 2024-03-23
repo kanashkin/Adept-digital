@@ -1,0 +1,275 @@
+/* Base styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    background-repeat: no-repeat;
+}
+
+input {
+    width: 100%;
+}
+
+button,
+input,
+textarea,
+select,
+option {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-flex;
+}
+
+li {
+    list-style: none;
+}
+
+span {
+    font-family: inherit;
+}
+
+.container {
+    max-width: 1420px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.right-container {
+    max-width: 1670px;
+    margin: 0 0 0 auto;
+    padding-left: 20px;
+}
+
+main {
+    overflow: hidden;
+}
+
+section {
+    position: relative;
+    z-index: 2;
+}
+
+.orange-btn {
+    background: rgba(246, 100, 55, 1);
+    height: 70px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFFFFF;
+    width: fit-content;
+}
+
+/* PROMO SECTION */
+
+.promo {
+    position: relative;
+    padding: 80px 0 120px;
+    background: url(../img/promo/bg.png) center / cover no-repeat;
+}
+
+.promo .container {
+    position: relative;
+    z-index: 2;
+}
+
+.promo::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 270px;
+    transform: translateX(-50%);
+    rotate: -11.94deg;
+    width: 2940px;
+    height: 450px;
+    border-radius: 2397px;
+    filter: blur(50px);
+    background: rgb(10, 58, 69);
+}
+
+.promo-dots {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.promo__wrapper {
+    display: flex;
+    justify-content: space-between;
+    color: #FFFFFF;
+}
+
+.promo-title {
+    font-size: 68px;
+    font-weight: 600;
+    line-height: 74.8px;
+    letter-spacing: 0.01em;
+    max-width: 789px;
+}
+
+.promo-descr {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    max-width: 760px;
+}
+
+.promo__btns {
+    display: flex;
+    gap: 16px;
+}
+
+.promo-btn {
+    height: 70px;
+    background: rgba(3, 1, 2, 0.46);
+    outline: 2px solid rgba(255, 255, 255, 1);
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.promo-btn.order {
+    padding: 0 60px;
+}
+
+.promo-btn.play {
+    width: 70px;
+    background-image: url(../img/promo/play.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.promo__offer-title {
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    text-align: right;
+}
+
+.promo-schema {
+    margin-top: 40px;
+}
+
+/* REVIEWS SECTION */
+
+.reviews {
+    margin-top: 161px;
+}
+
+.reviews__wrapper {
+    justify-content: space-between;
+    display: flex;
+    gap: 25px;
+}
+
+.reviews__info {
+    display: flex;
+    flex-direction: column;
+    max-width: 577px;
+}
+
+.reviews-title {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 55px;
+    letter-spacing: 0.01em;
+}
+
+.reviews-subtitle {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+}
+
+.reviews-btn {
+    margin: auto 0 0 0;
+    padding: 0 60px;
+}
+
+.reviews__item {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(50, 50, 71, 0.06),
+    0px 0px 8px 0px rgba(50, 50, 71, 0.13);
+    background: rgb(255, 255, 255);
+    width: 335px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.reviews__item-programs {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19.74px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.reviews__item-avatar {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.reviews__item-link,
+.reviews__tasks-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+}
+
+.reviews__item-link {
+    color: rgba(104, 153, 216, 1);
+}
+
+.reviews__tasks-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 17.6px;
+    letter-spacing: 0.01em;
+    color: #4F4F4F;
+}
+
+.reviews__tasks-text {
+    color: #000000;
+    margin-top: 10px;
+}
+
+.reviews__item-full {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.6px;
+    letter-spacing: 0.01em;
+    color: #6899D8;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.reviews__item-full::after {
+    content: url(../img/reviews/arrow.png);
+    height: 90%;
+    width: 10px;
+
+}
