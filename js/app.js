@@ -22,7 +22,6 @@ function videoPlayer() {
 
     video.addEventListener('timeupdate', function() {
         let value = (video.currentTime / video.duration) * 100
-        console.log(value);
         seekBar.value = value
     })
 
@@ -35,8 +34,10 @@ function videoPlayer() {
         if(video.paused) {
             video.play()
             video.classList.add('active')
+            playBtn.classList.add('active')
         } else {
             video.pause()
+            playBtn.classList.remove('active')
         }
     })
 }

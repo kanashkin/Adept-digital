@@ -92,6 +92,7 @@ section {
 /* PROMO SECTION */
 
 .promo {
+    overflow: hidden;
     position: relative;
     padding: 80px 0 120px;
     background: url(../img/promo/bg.png) center / cover no-repeat;
@@ -252,6 +253,16 @@ section {
     .promo {
         height: 1780px;
     }
+    .promo__offer {
+        width: 100%;
+    }
+    .promo-btn.order {
+        padding: 0 30px;
+        width: 80%;
+    }
+    .promo-btn.play {
+        min-width: 70px;
+    }
     .promo-schema {
         margin: 0 auto;
         content: url(../img/promo/schema-360.png);
@@ -380,6 +391,11 @@ section {
     content: url(../img/reviews/arrow.png);
     height: 90%;
     width: 10px;
+    transition: .3s all;
+}
+
+.reviews__item-full:hover::after {
+    margin-left: 5px;
 }
 
 .reviews-dots {
@@ -477,6 +493,7 @@ section {
     }
     .reviews-swiper .reviews-btn {
         width: 100%;
+        padding: 0 40px;
     }
 }
 
@@ -514,27 +531,25 @@ section {
 
 .module {
     position: relative;
-    padding: 40px 0 120px;
-    border-radius: 40px 40px 0 0;
+    padding: 40px 0 80px;
+    border-radius: 40px 80px 0 0;
     color: #FFFFFF;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+.module:not(.module:first-child) {
+    margin-top: -40px;
+}
+
+.module.black {
+    color: #000000;
+}
+
 .module .container {
     position: relative;
     z-index: 2;
-}
-
-.vektor-1 {
-    position: absolute;
-    right: -61px;
-    top: -20px;
-    width: 585px;
-    height: 684px;
-    filter: blur(642.78px);
-    background: rgb(13, 201, 240);
 }
 
 .vektor-2 {
@@ -548,22 +563,10 @@ section {
     opacity: 0.6;
 }
 
-.module:not(.module:first-child) {
-    margin-top: -80px;
-}
-
-.module.main {
-    padding: 80px 0 160px;
-}
-
-.module__wrapper {
+.module__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.module.main .module__wrapper {
-    align-items: flex-start;
 }
 
 .module-title {
@@ -578,11 +581,7 @@ section {
     line-height: 39.6px;
 }
 
-.module-title.black {
-    color: #000;
-}
-
-.module-link {
+.module-open {
     width: 46px;
     height: 46px;
     border-radius: 50%;
@@ -593,30 +592,41 @@ section {
     align-items: center;
 }
 
-.module-link:hover {
+.module-open:hover {
     background: #FF8A65;
 }
 
-.module__wrapper-main {
+.module__info {
     margin-top: 60px;
     display: flex;
     justify-content: space-between;
 }
 
 .module__list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    height: fit-content;
     gap: 20px;
-    max-width: 52%;
+    flex-wrap: wrap;
+    max-width: 712px;
+    width: 100%;
 }
 
 .module__list-item {
+    width: calc(50% - 10px);
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background: #135E96;
     border-radius: 16px;
+}
+
+.module__list-item.full {
+    width: 100%;
+    height: fit-content;
+}
+
+.module__list-item.full .module__list-item_descr {
+    max-width: 546px;
 }
 
 .module__list-item_title {
@@ -633,9 +643,9 @@ section {
 }
 
 .module__img {
+    height: fit-content;
     position: relative;
     max-width: 45%;
-    height: fit-content;
 }
 
 .module__img::before {
@@ -819,9 +829,6 @@ section {
         bottom: auto;
         top: 95%;
     }
-    .vektor-1 {
-        display: none;
-    }
     .module__offer {
         padding: 40px;
         text-align: center;
@@ -942,11 +949,11 @@ section {
     .module:not(.module:first-child) {
         margin-top: -60px;
     }
-    .module-link {
+    .module-open {
         width: 40px;
         height: 40px;
     }
-    .module-link img {
+    .module-open img {
         max-width: 14px;
     }
     .module__offer {
@@ -1037,6 +1044,11 @@ section {
     .action-dots {
         right: -30px;
     }
+    .module__offer-btn {
+        padding: 0;
+        margin-top: 30px;
+        width: 100%;
+    }
 }
 
 /* VIDEO SECTION */
@@ -1084,6 +1096,18 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.video-play .pause-btn {
+    display: none;
+}
+
+.video-play.active .pause-btn {
+    display: block;
+}
+
+.video-play.active .play-btn {
+    display: none;
 }
 
 .video-play img {

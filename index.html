@@ -137,17 +137,17 @@
                 </p>
             </div>
             <div class="modules__items">
-                <div class="module main" style="background: #0F4B78;">
+                <div class="module" style="background: #0F4B78;">
                     <div class="container">
-                        <div class="module__wrapper">
+                        <div class="module__header">
                             <h3 class="module-title">АДЕПТ: Исполнительная <br> документация – веб-система</h3>
-                            <a class="module-link" href="https://gk-adept.ru/programmy/adept_ispolntitelnaya_dokumentaciya/">
+                            <button class="module-open">
                                 <img src="img/modules/link-btn.png" alt="">
-                            </a>
+                            </button>
                         </div>
-                        <div class="module__wrapper-main">
+                        <div class="module__info">
                             <ul class="module__list">
-                                <li class="module__list-item">
+                                <li class="module__list-item" style="background: #135E96;">
                                     <div class="module__list-item_title">Подготовка и согласование исполнительной документации. Реестр.</div>
                                     <p class="module__list-item_descr">
                                         Общий и специальные журналы работ, акты освидетельствования,
@@ -156,7 +156,7 @@
                                         Любые маршруты согласования. 
                                     </p>
                                 </li>
-                                <li class="module__list-item">
+                                <li class="module__list-item" style="background: #135E96;">
                                     <div class="module__list-item_title">Инспекции строительного контроля и входного качества материалов</div>
                                     <p class="module__list-item_descr">
                                         Планирование работы службы стройконтроля.
@@ -164,14 +164,14 @@
                                         Электронное согласование исполнительной документации
                                     </p>
                                 </li>
-                                <li class="module__list-item">
+                                <li class="module__list-item" style="background: #135E96;">
                                     <div class="module__list-item_title">Мониторинг хода строительства для руководителя</div>
                                     <p class="module__list-item_descr">
                                         Информация по всем стройкам на одном экране для анализа,
                                         где требуется оперативное вмешательство
                                     </p>
                                 </li>
-                                <li class="module__list-item">
+                                <li class="module__list-item" style="background: #135E96;">
                                     <div class="module__list-item_title">Вся документация по стройке с разделением доступа </div>
                                     <p class="module__list-item_descr">
                                         Система ролей и доступов позволяет организовать
@@ -179,69 +179,266 @@
                                     </p>
                                 </li>
                             </ul>
-                            <div class="module__img">
-                                <img src="img/modules/01/screen.png" alt="">
-                            </div>
+                            <img class="module__img" src="img/modules/01.svg" alt="">
                         </div>
                     </div>
-                    <div class="vektor-1" alt=""></div>
                     <div class="vektor-2" alt=""></div>
                 </div>
                 <div class="module" style="background: #07303D;">
-                    <div class="container module__wrapper">
-                        <h3 class="module-title">АДЕПТ: Стройконтроль – мобильное <br> приложение под iOS и Android</h3>
-                        <a class="module-link" href="https://gk-adept.ru/programmy/adept_strojkontrol/">
-                            <img src="img/modules/link-btn.png" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div class="module" style="background: #6DD0D7;">
-                    <div class="container module__wrapper">
-                        <h3 class="module-title black">АДЕПТ: Управление строительством</h3>
-                        <a class="module-link" href="https://gk-adept.ru/programmy/adept_upravlenie_stroitelstvom/">
-                            <img src="img/modules/link-btn.png" alt="">
-                        </a> 
-                    </div>
-                </div>
-                <div class="module" style="background: linear-gradient(90deg, #D8D8D8 0%, #C2C2DD 102.16%);">
-                    <div class="container module__wrapper">
-                        <h3 class="module-title small black">АДЕПТ: Смета</h3>
-                        <a class="module-link" href="https://gk-adept.ru/programmy/gk_adept_smeta/">
-                            <img src="img/modules/link-btn.png" alt="">
-                        </a>  
-                    </div>
-                </div>
-                <div class="module" style="background: linear-gradient(90deg, #25446B -22.71%, #116F91 100%);">
-                    <div class="container module__wrapper">
-                        <h3 class="module-title small">АДЕПТ: Проект</h3>
-                        <a class="module-link" href="">
-                            <img src="img/modules/link-btn.png" alt="https://gk-adept.ru/programmy/adept_proekt1/">
-                        </a>   
-                    </div>
-                </div>
-                <div class="module" style="background: linear-gradient(89.94deg, #256481 0.05%, #47D7E0 208.54%);">
-                    <div class="container module__wrapper">
-                        <h3 class="module-title small">BIM</h3>
-                        <a class="module-link" href="https://gk-adept.ru/programmy/bim/">
-                            <img src="img/modules/link-btn.png" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div class="module" style="background: #F6F4EE;">
-                    <div class="container module__wrapper">
-                        <h3 class="module-title small black">Адепт: Сварка</h3>
-                        <a class="module-link" href="https://gk-adept.ru/programmy/adept_svarka/">
-                            <img src="img/modules/link-btn.png" alt="">
-                        </a> 
-                    </div>
-                </div>
-                <div class="module" style="background-image: url(img/modules/08/bg.png)">
                     <div class="container">
-                        <div class="module__wrapper">
-                            <h3 class="module-title small">АДЕПТ: Проект</h3>
-                            <a class="module-link" href="https://gk-adept.ru/programmy/adept_proekt1/">
+                        <div class="module__header">
+                            <h3 class="module-title">АДЕПТ: Стройконтроль – мобильное <br> приложение под iOS и Android</h3>
+                            <button class="module-open">
                                 <img src="img/modules/link-btn.png" alt="">
-                            </a>
+                            </button>
+                        </div>
+                        <div class="module__info">
+                            <ul class="module__list">
+                                <li class="module__list-item" style="background: #0B212C;">
+                                    <div class="module__list-item_title">Связь с веб-системой Адепт: Исполнительная документация</div>
+                                    <p class="module__list-item_descr">
+                                        Общая база документов, замечаний и предписаний позволяет удобно работать как с компьютера в офисе,  так и с мобильного телефона на стройке
+                                    </p>
+                                </li>
+                                <li class="module__list-item" style="background: #0B212C;">
+                                    <div class="module__list-item_title">Создание замечаний в системе</div>
+                                    <p class="module__list-item_descr">
+                                        Инспектор может создать замечание, приколоть фото о нарушении, обозначить его место на чертеже. Ответственный получит уведомление. После устранения инспектор получит уведомление о необходимости повторной проверки  
+                                    </p>
+                                </li>
+                                <li class="module__list-item" style="background: #0B212C;">
+                                    <div class="module__list-item_title">Планирование работы инспекторов стройконтроля</div>
+                                    <p class="module__list-item_descr">
+                                        Участники инспекций получают уведомления о дате и месте проведения инспекций, могут посмотреть план своих инспекций за период 
+                                    </p>
+                                </li>
+                                <li class="module__list-item" style="background: #0B212C;">
+                                    <div class="module__list-item_title">Формирование предписаний</div>
+                                    <p class="module__list-item_descr">
+                                        На основании сделанных замечаний формируется предписание, уходит уведомление ответственному.  и СП.
+                                    </p>
+                                </li>
+                            </ul>
+                            <img class="module__img" src="img/modules/02.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="module black" style="background: #4EBCC1;">
+                    <div class="container">
+                        <div class="module__header">
+                            <h3 class="module-title">АДЕПТ: Управление строительством</h3>
+                            <button class="module-open">
+                                <img src="img/modules/link-btn.png" alt="">
+                            </button>
+                        </div>
+                        <div class="module__info">
+                            <ul class="module__list">
+                                <li class="module__list-item" style="background: #5DD9E0;">
+                                    <div class="module__list-item_title">Ресурсное планирование строительства</div>
+                                    <p class="module__list-item_descr">
+                                        Планирование загрузки людей и механизмов.
+                                        Корректировка графика под ресурсные возможности.
+                                    </p>
+                                </li>
+                                <li class="module__list-item" style="background: #5DD9E0;">
+                                    <div class="module__list-item_title">Календарное планирование строительства</div>
+                                    <p class="module__list-item_descr">
+                                        График производства работ на основе смет. Планирование любых других работ. Обновление графика при изменении смет. 
+                                    </p>
+                                </li>
+                                <li class="module__list-item" style="background: #5DD9E0;">
+                                    <div class="module__list-item_title">Планирование поставки материалов и оборудования</div>
+                                    <p class="module__list-item_descr">
+                                        Формирование от планировщика заявок на склад и получение информации о возможности поставок. Корректировка графика.
+                                    </p>
+                                </li>
+                                <li class="module__list-item" style="background: #5DD9E0;">
+                                    <div class="module__list-item_title">План-фактный анализ строительства</div>
+                                    <p class="module__list-item_descr">
+                                        Выдача недельно-суточных заданий на стройку. Сбор факта. Анализ и «догоночное» планирование
+                                    </p>
+                                </li>
+                            </ul>
+                            <img class="module__img" src="img/modules/03.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="module black" style="background: #D8D8D8;">
+                    <div class="container">
+                        <div class="module__header">
+                            <h3 class="module-title small">АДЕПТ: Смета</h3>
+                            <button class="module-open">
+                                <img src="img/modules/link-btn.png" alt="">
+                            </button>
+                        </div>
+                        <div class="module__info">
+                            <ul class="module__list">
+                                <li class="module__list-item" style="background: #F2F1F1;">
+                                    <div class="module__list-item_title">Расчет стоимости BIM модели</div>
+                                    <p class="module__list-item_descr">
+                                        Создание смет на основе 3d модели объекта и их актуализация после изменения модели 
+                                    </p>
+                                </li>
+                                <li class="module__list-item" style="background: #F2F1F1;">
+                                    <div class="module__list-item_title">Укрупненное планирование стоимости СМР</div>
+                                    <p class="module__list-item_descr">
+                                        Оценка рентабельности проекта на этапе тендера
+                                    </p>
+                                </li>
+                                <li class="module__list-item" style="background: #F2F1F1;">
+                                    <div class="module__list-item_title">Расчет смет и калькуляций</div>
+                                    <p class="module__list-item_descr">
+                                        Все способы расчета на основе актуальных ГЭСН, ФЕР, ТЕР, ведомственных сборников и с помощью фирменных расценок  
+                                    </p>
+                                </li>
+                                <li class="module__list-item" style="background: #F2F1F1;">
+                                    <div class="module__list-item_title">Проверка смет и калькуляций</div>
+                                    <p class="module__list-item_descr">
+                                        Проверка на соответствие нормативам.
+                                        При сравнении с эталонной сметой анализ расценок, коэффициентов, НР и СП.
+                                    </p>
+                                </li>
+                            </ul>
+                            <img class="module__img" src="img/modules/04.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="module" style="background: #0F4B78;">
+                    <div class="container">
+                        <div class="module__header">
+                            <h3 class="module-title small">АДЕПТ: Проект</h3>
+                            <button class="module-open">
+                                <img src="img/modules/link-btn.png" alt="">
+                            </button>
+                        </div>
+                        <div class="module__info">
+                            <ul class="module__list">
+                                <li class="module__list-item" style="background: #135E96;">
+                                    <div class="module__list-item_title">Расчет стоимости ПИР</div>
+                                    <p class="module__list-item_descr">
+                                        Более 50 способов расчета. Автоматический подбор формулы расчета.
+                                        Подборка коэффициентов из справочника.
+                                    </p>
+                                </li>
+                                <li class="module__list-item" style="background: #135E96;">
+                                    <div class="module__list-item_title">Разъяснения применения расценок</div>
+                                    <p class="module__list-item_descr">
+                                        Разъяснения ОАО «ЦЕНТРИНВЕСТпроект» к расценкам и сборникам. Возможность задать свой вопрос.
+                                    </p>
+                                </li>
+                                <li class="module__list-item" style="background: #135E96;">
+                                    <div class="module__list-item_title">Актуальная база</div>
+                                    <p class="module__list-item_descr">
+                                        Гибкий поиск позволяет быстро найти в системе нужный справочник, расценку или ответ на вопрос из 300 действующих СБЦ, МРР и 1200 разъяснений
+                                    </p>
+                                </li>
+                                <li class="module__list-item" style="background: #135E96;">
+                                    <div class="module__list-item_title">Экспертиза смет на ПИР</div>
+                                    <p class="module__list-item_descr">
+                                        Автоматическая проверка сметы на наличие изменений в расчете. Сравнение смет
+                                    </p>
+                                </li>
+                            </ul>
+                            <img class="module__img" src="img/modules/05.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="module" style="background: #4EBCC1;">
+                    <div class="container">
+                        <div class="module__header">
+                            <h3 class="module-title">BIM</h3>
+                            <button class="module-open">
+                                <img src="img/modules/link-btn.png" alt="">
+                            </button>
+                        </div>
+                        <div class="module__info">
+                            <ul class="module__list">
+                                <li class="module__list-item" style="background: #319096;">
+                                    <div class="module__list-item_title">Расчет стоимости BIM модели</div>
+                                    <p class="module__list-item_descr">
+                                        Загрузка 3D модели в программу Адепт Управления строительством в формате IFC в виде спецификации (ведомости объемов и элементов) для создания смет. Обновления сметы и спецификации объемов, после обносвления 3D модели. сравнение ревизии сметы
+                                    </p>
+                                </li>
+                                <li class="module__list-item" style="background: #319096;">
+                                    <div class="module__list-item_title">График производства работ с учетом данных из 3D модели</div>
+                                    <p class="module__list-item_descr">
+                                        Создание графика производства работ на основании созданной сметы. График будет автоматически перестраиваться при внесении данных о фактическом выполнени работ  
+                                    </p>
+                                </li>
+                                <li class="module__list-item" style="background: #319096;">
+                                    <div class="module__list-item_title">Сбор данных со стройки</div>
+                                    <p class="module__list-item_descr">
+                                        Выгразка факта в  3D модель. Исполнительная документация  с BIM-данными
+                                    </p>
+                                </li>
+                                <li class="module__list-item" style="background: #319096;">
+                                    <div class="module__list-item_title">Визуализация план-факта на 3D модели</div>
+                                    <p class="module__list-item_descr">
+                                        Отслеживание сроков производства работ на этапе создания плана и после внесения фактических объемов непосредственно на 3D модели в программе NavisWorks
+                                    </p>
+                                </li>
+                            </ul>
+                            <img class="module__img" src="img/modules/06.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="module black" style="background: #D2D2D5;">
+                    <div class="container">
+                        <div class="module__header">
+                            <h3 class="module-title small">Адепт: Сварка</h3>
+                            <button class="module-open">
+                                <img src="img/modules/link-btn.png" alt="">
+                            </button>
+                        </div>
+                        <div class="module__info">
+                            <ul class="module__list">
+                                <li class="module__list-item full" style="background: #F2F1F1;">
+                                    <div class="module__list-item_title">Возможность вести всю документацию по сварочным работам: </div>
+                                    <p class="module__list-item_descr">
+                                        Реестрсварщиков, Аттестация сварочных технологий, материалов и оборудования,Технологические карты, Реестр стыков, Формирование допускных стыков, допускныхлистов, Лаборатории ЛНК/ЛРК, Вх. контроль сварочных материалов, Журнал сваркитрубопроводов и др.
+                                    </p>
+                                </li>
+                            </ul>
+                            <img class="module__img" src="img/modules/07.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="module" style="background-image: url(img/modules/08/bg.png);">
+                    <div class="container">
+                        <div class="module__header">
+                            <h3 class="module-title small">Адепт:Сварка</h3>
+                            <button class="module-open">
+                                <img src="img/modules/link-btn.png" alt="">
+                            </button>
+                        </div>
+                        <div class="module__info">
+                            <ul class="module__list">
+                                <li class="module__list-item" style="background: #00222E;">
+                                    <div class="module__list-item_title">Отслеживаниестроительной готовности для объектов ПНР</div>
+                                    <p class="module__list-item_descr">
+                                        (по факту закрытияИД для финальных работ СМР или проведению финальных инспекций СМР)
+                                    </p>
+                                </li>
+                                <li class="module__list-item" style="background: #00222E;">
+                                    <div class="module__list-item_title">КонтрольПНР</div>
+                                    <p class="module__list-item_descr">
+                                        Формирование инспекций и замечаний ПНР в веб-системе и в мобильном приложении.Матрица для кодов проверок. NCR – отчет о несоответствии
+                                    </p>
+                                </li>
+                                <li class="module__list-item" style="background: #00222E;">
+                                    <div class="module__list-item_title">Журналпроизводства ПНР</div>
+                                    <p class="module__list-item_descr">
+                                        АктыПНР: акты ИИ, КО, Акт механической готовности и мн. др.
+                                    </p>
+                                </li>
+                                <li class="module__list-item" style="background: #00222E;">
+                                    <div class="module__list-item_title">Дашборд выполнения ПНР (в структуре ПНР).</div>
+                                    <p class="module__list-item_descr">
+                                        Позволяетвидеть количество объектов ПНР, объем оборудования в инспекциях, объемоборудования в замечаниях
+                                    </p>
+                                </li>
+                            </ul>
+                            <img class="module__img" src="img/modules/08.svg" alt="">
                         </div>
                         <div class="module__offer">
                             <div class="module__offer__content">
@@ -279,7 +476,8 @@
             </div>
             <div class="video__control">
                 <button class="video-play">
-                    <img src="img/video/play.png" alt="">
+                    <img class="play-btn" src="img/video/play.png" alt="">
+                    <img class="pause-btn" src="img/video/pause.png" alt="">
                 </button>
                 <input class="video-input" type="range" value="0">
             </div>
