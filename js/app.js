@@ -43,3 +43,33 @@ function videoPlayer() {
 }
 
 videoPlayer()
+
+function modulesCollapse() {
+    const modulesBtns = document.querySelectorAll('.module-open')
+
+    modulesBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            const currentModule = btn.closest('.module')
+            currentModule.classList.toggle('active')
+
+            checkActive()
+        })
+    })
+
+    function checkActive() {
+        const infoBlocks = document.querySelectorAll('.module__info')
+
+        infoBlocks.forEach(function(block) {
+            console.log(block);
+            if(block.closest('.module').classList.contains('active')) {
+                block.style.height = block.scrollHeight + 'px'
+            } else {
+                block.style.height = '0px'
+            }
+        })
+    }
+
+    checkActive()
+}
+
+modulesCollapse()

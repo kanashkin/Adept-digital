@@ -532,7 +532,7 @@ section {
 .module {
     position: relative;
     padding: 40px 0 80px;
-    border-radius: 40px 80px 0 0;
+    border-radius: 40px 40px 0 0;
     color: #FFFFFF;
     background-position: center;
     background-size: cover;
@@ -597,9 +597,20 @@ section {
 }
 
 .module__info {
-    margin-top: 60px;
+    margin-top: 0;
     display: flex;
     justify-content: space-between;
+    position: relative;
+    height: 0px;
+    opacity: 0;
+    z-index: -1;
+    transition: .6s ease-in-out;
+}
+
+.module.active .module__info {
+    margin-top: 60px;
+    opacity: 1;
+    z-index: 1;
 }
 
 .module__list {
@@ -643,23 +654,6 @@ section {
 }
 
 .module__img {
-    height: fit-content;
-    position: relative;
-    max-width: 45%;
-}
-
-.module__img::before {
-    content: "";
-    position: absolute;
-    width: 167.63px;
-    height: 167.63px;
-    left: 1.01%;
-    bottom: -40%;
-    filter: blur(3.35px);
-    background: linear-gradient(140.03deg, rgba(0, 0, 0, 0.35) -7.02%, rgba(0, 0, 0, 0) 51.11%);
-}
-
-.module__img img {
     max-width: 100%;
 }
 
@@ -803,9 +797,6 @@ section {
     .module {
         z-index: 3;
     }
-    .module.main {
-        padding: 60px 0 140px;
-    }
     .module-title {
         font-size: 36px;
         line-height: 39.6px;
@@ -814,7 +805,7 @@ section {
         font-size: 32px;
         line-height: 35.2px;
     }
-    .module__wrapper-main {
+    .module__info {
         flex-direction: column;
         gap: 40px;
     }
@@ -824,10 +815,6 @@ section {
     .module__img {
         margin: 0 0 0 auto;
         max-width: 100%;
-    }
-    .module__img::before {
-        bottom: auto;
-        top: 95%;
     }
     .module__offer {
         padding: 40px;
@@ -931,7 +918,7 @@ section {
     .modules__items {
         margin-top: 30px;
     }
-    .module__wrapper-main {
+    .module__info.active {
         margin-top: 25px;
     }
     .module__list {
@@ -939,15 +926,18 @@ section {
         flex-direction: column;
         gap: 20px;
     }
+    .module__list-item {
+        width: 100%;
+    }
     .module-title.small {
         font-size: 24px;
         line-height: 26px;
     }
     .module {
-        padding: 35px 0 95px;
+        padding: 35px 0 70px;
     }
     .module:not(.module:first-child) {
-        margin-top: -60px;
+        margin-top: -35px;
     }
     .module-open {
         width: 40px;
@@ -1018,9 +1008,6 @@ section {
     }
     .module__img {
         margin: 0 auto;
-    }
-    .module.main {
-        padding: 40px 0 100px;
     }
     .module__offer {
         padding: 40px 20px;
