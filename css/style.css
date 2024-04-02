@@ -537,16 +537,16 @@ section {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    transition: .5s all;
+    transition: .8s ease;
 }
 
 .module__info {
     height: 0;
-    overflow: hidden;
     display: flex;
     justify-content: space-between;
     position: relative;
-    transition: .5s all;
+    overflow: hidden;
+    transition: .8s ease;
 }
 
 .module.active {
@@ -557,8 +557,13 @@ section {
     margin-top: 60px;
 }
 
+.module:first-child {
+    padding: 40px 0 120px;
+}
+
 .module:first-child .module__info {
     height: auto !important;
+    margin-top: 60px !important;
 }
 
 .module:not(.module:first-child) {
