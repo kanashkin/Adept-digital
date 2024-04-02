@@ -1,9 +1,9 @@
 const reviewsSwiper = new Swiper('.reviews-swiper', {
     spaceBetween: 30,
     loop: true,
-    slidesPerView: 'auto', // Устанавливаем количество видимых слайдов в зависимости от их ширины
-    freeMode: true, // Включаем свободный режим
-    freeModeSticky: true, // Включаем закрепление в свободном режиме
+    slidesPerView: 'auto',
+    freeMode: true,
+    freeModeSticky: true,
 })
 
 function blockHeight() {
@@ -44,32 +44,39 @@ function videoPlayer() {
 
 videoPlayer()
 
-function modulesCollapse() {
-    const modulesBtns = document.querySelectorAll('.module-open')
+function scrollModuleBlocks() {
+    const modulesBlocks = document.querySelectorAll('.module')
 
-    modulesBtns.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            const currentModule = btn.closest('.module')
-            currentModule.classList.toggle('active')
+    modulesBlocks.forEach(function(moduleBlock) {
+        const moduleBlockInfo = moduleBlock.querySelector('.module__info')
+        const blockScrollHeight = moduleBlockInfo.scrollHeight
+        let blockClientHeight
 
-            checkActive()
+        window.addEventListener('scroll', function() {
+
+            blockClientHeight = moduleBlockInfo.clientHeight
+
+            if (moduleBlock.getBoundingClientRect().top <= blockScrollHeight) {
+
+                moduleBlock.classList.add('active')
+
+                if (blockClientHeight < blockScrollHeight) {
+                    let blockHeight = blockScrollHeight - moduleBlock.getBoundingClientRect().top
+
+                    if (blockHeight <= blockScrollHeight) {
+                        moduleBlockInfo.style.height = blockHeight + 'px'
+                    } else {
+                        moduleBlockInfo.style.height = blockScrollHeight + 'px'
+                    }
+                }
+            } else if (moduleBlock.getBoundingClientRect().top <= 0) {
+                moduleBlockInfo.style.height = blockScrollHeight + 'px'
+            }
+
         })
     })
-
-    function checkActive() {
-        const infoBlocks = document.querySelectorAll('.module__info')
-
-        infoBlocks.forEach(function(block) {
-            console.log(block);
-            if(block.closest('.module').classList.contains('active')) {
-                block.style.height = block.scrollHeight + 'px'
-            } else {
-                block.style.height = '0px'
-            }
-        })
-    }
-
-    checkActive()
 }
 
-modulesCollapse()
+if (window.innerWidth >= 1440) {
+    scrollModuleBlocks()
+}
